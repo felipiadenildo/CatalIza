@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/dancing-script/600.css";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/600.css";
+
+@theme {
+  --font-sans: "Manrope Variable", system-ui, -apple-system, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-script: "Dancing Script", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #5b6b82;
+  --text-faint: #93a1b5;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-soft: #eaf1ff;
+  --accent: #dc2626;
+  --accent-soft: #fef2f2;
+  --grad-a: #0ea5e9;
+  --grad-b: #2563eb;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0a0f1a;
+  --surface: #0f1729;
+  --surface-2: #16213b;
+  --border: #223049;
+  --border-strong: #2d3f5f;
+  --text: #e6ebf3;
+  --text-muted: #8fa0bd;
+  --text-faint: #5b6b82;
+  --primary: #6d9bf5;
+  --primary-hover: #8bb0f8;
+  --primary-soft: #16233d;
+  --accent: #f2695c;
+  --accent-soft: #2a1518;
+  --grad-a: #38bdf8;
+  --grad-b: #60a5fa;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+.brand-catal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--primary);
+}
+.brand-iza {
+  font-family: var(--font-script);
+  font-weight: 600;
+  color: var(--accent);
+  margin-left: -2px;
+}
+
+h1, h2, h3, h4 { text-wrap: balance; }
+
+.prose-body p + p { margin-top: 1em; }

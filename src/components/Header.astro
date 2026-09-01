@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath, getBareCurrentPath } from "../i18n/utils";
+import ThemeToggle from "./ThemeToggle.astro";
+import LangToggle from "./LangToggle.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const barePath = getBareCurrentPath(Astro.url);
+
+const NAV = [
+  { href: "/", key: "nav.home" as const },
+  { href: "/gcms-analyzer/", key: "nav.gcms" as const },
+  { href: "/fps-calculator/", key: "nav.fps" as const, soon: true },
+  { href: "/contact/", key: "nav.contact" as const },
+];
+---
+
+<header class="sticky top-0 z-40 border-b" style="background: var(--surface); border-color: var(--border);">
+  <div class="mx-auto max-w-5xl px-5 h-16 flex items-center justify-between gap-4">
+    <a href={translatePath("/")} class="flex items-baseline gap-0.5 shrink-0" aria-label="CatalIza">
+      <span class="brand-catal text-2xl">Catal</span><span class="brand-iza text-3xl">Iza</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-1 text-sm font-semibold" style="color: var(--text-muted);">
+      {NAV.map((item) => {
+        const active = barePath === item.href;
+        return (
+          <a
+            href={item.soon ? undefined : translatePath(item.href)}
+            aria-disabled={item.soon}
+            class:list={["px-3 py-2 rounded-lg transition-colors", item.soon && "pointer-events-none opacity-50"]}
+            style={active ? "background: var(--primary-soft); color: var(--primary);" : ""}
+          >
+            {t(item.key)}
+            {item.soon && <span class="ml-1.5 text-[10px] uppercase tracking-wide font-bold" style="color: var(--text-faint);">· {t("nav.soon")}</span>}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="flex items-center gap-2 shrink-0">
+      <LangToggle />
+      <ThemeToggle />
+    </div>
+  </div>
+</header>

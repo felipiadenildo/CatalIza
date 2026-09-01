@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/BaseLayout.astro";
+import GcmsAnalyzerContent from "../../components/pages/GcmsAnalyzerContent.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("gcms.title")} description={t("gcms.lede")}>
+  <GcmsAnalyzerContent />
+</Layout>

@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang === "pt" ? "pt-BR" : "en"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored === "light" || stored === "dark" ? stored : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} · CatalIza</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} · CatalIza`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:rounded-md focus:px-4 focus:py-2"
+      style="background: var(--primary); color: white;"
+    >
+      {t("nav.skipToContent")}
+    </a>
+    <Header />
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

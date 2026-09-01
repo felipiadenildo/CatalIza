@@ -1,0 +1,16 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="mx-auto max-w-2xl px-5 py-24 text-center">
+  <div class="mx-auto w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style="background: var(--surface-2);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9 2h6"/></svg>
+  </div>
+  <span class="text-xs font-bold uppercase tracking-widest" style="color: var(--primary);">{t("fps.eyebrow")}</span>
+  <h1 class="text-2xl font-extrabold mt-1">{t("fps.title")}</h1>
+  <p class="mt-3 text-sm leading-relaxed max-w-[44ch] mx-auto" style="color: var(--text-muted);">{t("fps.body")}</p>
+  <a href={translatePath("/")} class="inline-block mt-6 text-sm font-bold" style="color: var(--primary);">← {t("fps.back")}</a>
+</div>

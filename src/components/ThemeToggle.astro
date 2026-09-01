@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="w-8 h-8 rounded-full border flex items-center justify-center"
+  style="border-color: var(--border-strong); background: var(--surface-2); color: var(--text-muted);"
+  aria-label={t("theme.toDark")}
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4.2"/>
+  </svg>
+</button>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const root = document.documentElement;
+    const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    const next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+</script>

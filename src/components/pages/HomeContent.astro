@@ -1,0 +1,50 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="mx-auto max-w-3xl px-5 py-16">
+  <span class="text-xs font-bold uppercase tracking-widest" style="color: var(--primary);">{t("home.eyebrow")}</span>
+  <h1 class="text-3xl sm:text-4xl font-extrabold mt-2 max-w-[18ch]">{t("home.title")}</h1>
+  <p class="mt-5 text-base leading-relaxed max-w-[62ch]" style="color: var(--text-muted);">{t("home.lede")}</p>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-10">
+    <div class="rounded-xl border p-5" style="border-color: var(--border); background: var(--surface);">
+      <h2 class="font-extrabold text-sm mb-2">{t("home.why.title")}</h2>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("home.why.body")}</p>
+    </div>
+    <div class="rounded-xl border p-5" style="border-color: var(--border); background: var(--surface);">
+      <h2 class="font-extrabold text-sm mb-2">{t("home.who.title")}</h2>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("home.who.body")}</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border p-5 mt-4 flex items-start gap-3" style="border-color: var(--border-strong); background: var(--surface-2);">
+    <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+    <div>
+      <h2 class="font-extrabold text-sm mb-1">{t("home.status.title")}</h2>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("home.status.body")}</p>
+    </div>
+  </div>
+
+  <h2 class="font-extrabold text-sm mt-12 mb-4">{t("home.modules.title")}</h2>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <a href={translatePath("/gcms-analyzer/")} class="rounded-xl border p-5 flex flex-col gap-2 transition-colors" style="border-color: var(--border); background: var(--surface);">
+      <span class="inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-bold" style="background: var(--primary-soft); color: var(--primary);">
+        {t("home.card.gcms.status")}
+      </span>
+      <h3 class="font-extrabold">{t("home.card.gcms.title")}</h3>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("home.card.gcms.desc")}</p>
+      <span class="text-sm font-bold mt-1" style="color: var(--primary);">{t("home.card.gcms.cta")} →</span>
+    </a>
+    <div class="rounded-xl border p-5 flex flex-col gap-2 opacity-60" style="border-color: var(--border); background: var(--surface);">
+      <span class="inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-bold" style="background: var(--surface-2); color: var(--text-faint); border: 1px solid var(--border);">
+        {t("home.card.fps.cta")}
+      </span>
+      <h3 class="font-extrabold">{t("home.card.fps.title")}</h3>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("home.card.fps.desc")}</p>
+    </div>
+  </div>
+</div>

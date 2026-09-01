@@ -1,0 +1,116 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const MOCKUP_URL = "https://claude.ai/code/artifact/47e8676f-fbab-45c7-91ca-e5b758eb32f6";
+---
+
+<div class="mx-auto max-w-3xl px-5 py-14">
+  <span class="text-xs font-bold uppercase tracking-widest" style="color: var(--primary);">{t("gcms.eyebrow")}</span>
+  <h1 class="text-3xl font-extrabold mt-2">{t("gcms.title")}</h1>
+
+  <div class="rounded-lg border px-4 py-3 mt-4 flex items-center gap-2 text-sm font-semibold" style="border-color: #fbe0a8; background: #fffaeb; color: #b45309;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="shrink-0"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L2.5 18a1.8 1.8 0 0 0 1.6 2.7h15.8a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.7 1.7 0 0 0-3.4 0z"/></svg>
+    {t("gcms.status.badge")}
+  </div>
+
+  <p class="mt-5 text-base leading-relaxed" style="color: var(--text-muted);">{t("gcms.lede")}</p>
+
+  <!-- Problem -->
+  <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.problem.title")}</h2>
+  <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.problem.body")}</p>
+
+  <!-- Workflow -->
+  <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.flow.title")}</h2>
+  <p class="text-sm leading-relaxed mb-6" style="color: var(--text-muted);">{t("gcms.flow.body")}</p>
+
+  <ol class="space-y-4">
+    {[
+      ["gcms.flow.step1.title", "gcms.flow.step1.body"],
+      ["gcms.flow.step2.title", "gcms.flow.step2.body"],
+      ["gcms.flow.step3.title", "gcms.flow.step3.body"],
+      ["gcms.flow.step4.title", "gcms.flow.step4.body"],
+      ["gcms.flow.step5.title", "gcms.flow.step5.body"],
+    ].map(([titleKey, bodyKey]) => (
+      <li class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+        <h3 class="font-bold text-sm">{t(titleKey as any)}</h3>
+        <p class="text-sm mt-1 leading-relaxed" style="color: var(--text-muted);">{t(bodyKey as any)}</p>
+      </li>
+    ))}
+  </ol>
+
+  <a
+    href={MOCKUP_URL}
+    target="_blank"
+    rel="noopener"
+    class="mt-6 flex items-center justify-between gap-4 rounded-xl border-2 px-5 py-4"
+    style="border-color: var(--primary); background: var(--primary-soft);"
+  >
+    <div>
+      <div class="font-extrabold" style="color: var(--primary);">{t("gcms.flow.preview.cta")} ↗</div>
+      <p class="text-xs mt-1" style="color: var(--text-muted);">{t("gcms.flow.preview.note")}</p>
+    </div>
+  </a>
+
+  <!-- Identification -->
+  <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.id.title")}</h2>
+  <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.id.body")}</p>
+  <div class="rounded-lg border-l-4 pl-4 py-1 mt-4" style="border-color: var(--border-strong);">
+    <h3 class="font-bold text-sm">{t("gcms.id.caveat.title")}</h3>
+    <p class="text-sm mt-1 leading-relaxed" style="color: var(--text-muted);">{t("gcms.id.caveat.body")}</p>
+  </div>
+
+  <!-- Calculations -->
+  <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.calc.title")}</h2>
+  <p class="text-sm leading-relaxed mb-6" style="color: var(--text-muted);">{t("gcms.calc.body")}</p>
+
+  <div class="space-y-4">
+    <div class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+      <h3 class="font-bold text-sm">{t("gcms.calc.rrf.title")}</h3>
+      <p class="text-sm mt-1 mb-2" style="color: var(--text-muted);">{t("gcms.calc.rrf.body")}</p>
+      <code class="block rounded-md px-3 py-2 text-sm" style="background: var(--surface-2); font-family: var(--font-mono);">{t("gcms.calc.rrf.formula")}</code>
+    </div>
+    <div class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+      <h3 class="font-bold text-sm">{t("gcms.calc.calib.title")}</h3>
+      <p class="text-sm mt-1 mb-2" style="color: var(--text-muted);">{t("gcms.calc.calib.body")}</p>
+      <code class="block rounded-md px-3 py-2 text-sm" style="background: var(--surface-2); font-family: var(--font-mono);">{t("gcms.calc.calib.formula")}</code>
+    </div>
+
+    <div class="rounded-xl border-2 p-4" style="border-color: var(--accent); background: var(--accent-soft);">
+      <h3 class="font-bold text-sm">{t("gcms.calc.noRRF.title")}</h3>
+      <p class="text-sm mt-1 leading-relaxed" style="color: var(--text-muted);">{t("gcms.calc.noRRF.body")}</p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+        <h3 class="font-bold text-xs">{t("gcms.calc.conv.title")}</h3>
+        <code class="block mt-2 text-xs" style="font-family: var(--font-mono); color: var(--text-muted);">{t("gcms.calc.conv.formula")}</code>
+      </div>
+      <div class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+        <h3 class="font-bold text-xs">{t("gcms.calc.yield.title")}</h3>
+        <code class="block mt-2 text-xs" style="font-family: var(--font-mono); color: var(--text-muted);">{t("gcms.calc.yield.formula")}</code>
+      </div>
+      <div class="rounded-xl border p-4" style="border-color: var(--border); background: var(--surface);">
+        <h3 class="font-bold text-xs">{t("gcms.calc.sel.title")}</h3>
+        <code class="block mt-2 text-xs" style="font-family: var(--font-mono); color: var(--text-muted);">{t("gcms.calc.sel.formula")}</code>
+      </div>
+    </div>
+
+    <div class="rounded-xl border-2 p-4" style="border-color: var(--primary); background: var(--primary-soft);">
+      <h3 class="font-bold text-sm">{t("gcms.calc.mb.title")}</h3>
+      <code class="block mt-2 mb-2 rounded-md px-3 py-2 text-sm" style="background: var(--surface); font-family: var(--font-mono);">{t("gcms.calc.mb.formula")}</code>
+      <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.calc.mb.body")}</p>
+    </div>
+  </div>
+
+  <!-- Stack -->
+  <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.stack.title")}</h2>
+  <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.stack.body")}</p>
+
+  <!-- Next -->
+  <div class="rounded-xl border p-5 mt-12" style="border-color: var(--border); background: var(--surface-2);">
+    <h2 class="font-extrabold text-sm mb-2">{t("gcms.next.title")}</h2>
+    <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.next.body")}</p>
+  </div>
+</div>

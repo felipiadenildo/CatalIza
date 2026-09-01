@@ -1,0 +1,15 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t mt-16" style="border-color: var(--border);">
+  <div class="mx-auto max-w-5xl px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm" style="color: var(--text-faint);">
+    <div class="flex items-baseline gap-0.5">
+      <span class="brand-catal text-base">Catal</span><span class="brand-iza text-lg">Iza</span>
+    </div>
+    <p>© {year} CatalIza — {t("footer.rights")}</p>
+  </div>
+</footer>

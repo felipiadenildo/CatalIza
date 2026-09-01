@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl, useTranslatedPath, getBareCurrentPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const barePath = getBareCurrentPath(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="flex rounded-full overflow-hidden border" style="border-color: var(--border-strong); background: var(--surface-2);">
+  <a
+    href={translatePath(barePath, "en")}
+    class="px-3 py-1.5 text-xs font-bold"
+    style={lang === "en" ? "background: var(--primary); color: white;" : "color: var(--text-muted);"}
+    >EN</a
+  >
+  <a
+    href={translatePath(barePath, "pt")}
+    class="px-3 py-1.5 text-xs font-bold"
+    style={lang === "pt" ? "background: var(--primary); color: white;" : "color: var(--text-muted);"}
+    >PT</a
+  >
+</div>

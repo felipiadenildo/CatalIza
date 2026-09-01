@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/BaseLayout.astro";
+import FpsCalculatorContent from "../../components/pages/FpsCalculatorContent.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("fps.title")} description={t("fps.body")}>
+  <FpsCalculatorContent />
+</Layout>
