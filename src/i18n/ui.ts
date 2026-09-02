@@ -45,6 +45,18 @@ export const ui = {
     "gcms.lede":
       "This page is the working proposal for the first CatalIza module: a tool that takes raw GC-MS runs and turns them into reaction metrics — conversion, yield, selectivity, mass balance — without manual spreadsheet work. Everything below is open for correction: the workflow, the identification method, and especially the formulas.",
 
+    "gcms.howto.title": "How to review this",
+    "gcms.howto.read.title": "Read it",
+    "gcms.howto.read.body": "This page is the whole proposal — the problem, the proposed workflow, how compounds get identified, and every formula the tool would compute.",
+    "gcms.howto.try.title": "Try it",
+    "gcms.howto.try.body": "Open the interactive preview linked below, add the demo files, run one, expand it, edit a field or two. It's built to be clicked through, not just looked at.",
+    "gcms.howto.flag.title": "Look at the flagged spots",
+    "gcms.howto.flag.body": "A few boxes below are marked \"Please confirm\" — those are places where this needs your judgment as the domain expert, not just a read-through.",
+    "gcms.howto.reply.title": "Send your notes back",
+    "gcms.howto.reply.body": "Just reply to the email this came in — agree, disagree, correct something, or say it looks right. No particular format needed.",
+
+    "gcms.needsConfirm": "Please confirm",
+
     "gcms.problem.title": "The problem",
     "gcms.problem.body":
       "Each reaction-screening run produces a chromatogram that has to be read manually: find the peaks, match them to known compounds, look up or estimate a response factor, and carry all of that through to conversion, yield and mass balance by hand. It works, but it doesn't scale past a handful of samples, and every manual step is a place where two people would get two different numbers from the same raw file.",
@@ -180,6 +192,18 @@ export const ui = {
     "gcms.status.badge": "Proposta — ainda não construída. Esta página existe pra revisão, não pra uso.",
     "gcms.lede":
       "Esta página é a proposta de trabalho do primeiro módulo da CatalIza: uma ferramenta que pega corridas brutas de GC-MS e transforma em métricas de reação — conversão, yield, seletividade, balanço de massa — sem trabalho manual de planilha. Tudo abaixo está aberto a correção: o fluxo, o método de identificação, e principalmente as fórmulas.",
+
+    "gcms.howto.title": "Como avaliar isso",
+    "gcms.howto.read.title": "Leia",
+    "gcms.howto.read.body": "Esta página é a proposta inteira — o problema, o fluxo proposto, como os compostos são identificados, e cada fórmula que a ferramenta calcularia.",
+    "gcms.howto.try.title": "Teste",
+    "gcms.howto.try.body": "Abra a prévia interativa linkada abaixo, adicione os arquivos de exemplo, rode um, expanda, edite um campo ou dois. Ela foi feita pra ser clicada, não só olhada.",
+    "gcms.howto.flag.title": "Repare nos pontos marcados",
+    "gcms.howto.flag.body": "Algumas caixas abaixo estão marcadas \"Por favor confirme\" — são pontos onde isso precisa do seu julgamento como especialista do domínio, não só de uma leitura.",
+    "gcms.howto.reply.title": "Mande seu retorno",
+    "gcms.howto.reply.body": "Basta responder o e-mail em que isso chegou — concordando, discordando, corrigindo algo, ou dizendo que está certo. Não precisa de formato específico.",
+
+    "gcms.needsConfirm": "Por favor confirme",
 
     "gcms.problem.title": "O problema",
     "gcms.problem.body":

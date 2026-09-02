@@ -17,6 +17,29 @@ const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
 
   <p class="mt-5 text-base leading-relaxed" style="color: var(--text-muted);">{t("gcms.lede")}</p>
 
+  <!-- How to review -->
+  <div class="rounded-xl border-2 p-5 mt-6" style="border-color: var(--primary); background: var(--primary-soft);">
+    <h2 class="text-lg font-extrabold mb-3">{t("gcms.howto.title")}</h2>
+    <ol class="space-y-2.5">
+      <li class="flex gap-2.5 text-sm leading-relaxed">
+        <span class="font-mono font-extrabold shrink-0" style="color: var(--primary);">1</span>
+        <span><b>{t("gcms.howto.read.title")}</b> — {t("gcms.howto.read.body")}</span>
+      </li>
+      <li class="flex gap-2.5 text-sm leading-relaxed">
+        <span class="font-mono font-extrabold shrink-0" style="color: var(--primary);">2</span>
+        <span><b>{t("gcms.howto.try.title")}</b> — {t("gcms.howto.try.body")}</span>
+      </li>
+      <li class="flex gap-2.5 text-sm leading-relaxed">
+        <span class="font-mono font-extrabold shrink-0" style="color: var(--primary);">3</span>
+        <span><b>{t("gcms.howto.flag.title")}</b> — {t("gcms.howto.flag.body")}</span>
+      </li>
+      <li class="flex gap-2.5 text-sm leading-relaxed">
+        <span class="font-mono font-extrabold shrink-0" style="color: var(--primary);">4</span>
+        <span><b>{t("gcms.howto.reply.title")}</b> — {t("gcms.howto.reply.body")}</span>
+      </li>
+    </ol>
+  </div>
+
   <!-- Problem -->
   <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.problem.title")}</h2>
   <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.problem.body")}</p>
@@ -56,7 +79,8 @@ const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
   <!-- Identification -->
   <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.id.title")}</h2>
   <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.id.body")}</p>
-  <div class="rounded-lg border-l-4 pl-4 py-1 mt-4" style="border-color: var(--border-strong);">
+  <div class="rounded-xl border-2 p-4 mt-4" style="border-color: var(--accent); background: var(--accent-soft);">
+    <span class="inline-block text-[11px] font-extrabold uppercase tracking-wide rounded-full px-2 py-0.5 mb-2" style="background: var(--accent); color: white;">{t("gcms.needsConfirm")}</span>
     <h3 class="font-bold text-sm">{t("gcms.id.caveat.title")}</h3>
     <p class="text-sm mt-1 leading-relaxed" style="color: var(--text-muted);">{t("gcms.id.caveat.body")}</p>
   </div>
@@ -78,6 +102,7 @@ const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
     </div>
 
     <div class="rounded-xl border-2 p-4" style="border-color: var(--accent); background: var(--accent-soft);">
+      <span class="inline-block text-[11px] font-extrabold uppercase tracking-wide rounded-full px-2 py-0.5 mb-2" style="background: var(--accent); color: white;">{t("gcms.needsConfirm")}</span>
       <h3 class="font-bold text-sm">{t("gcms.calc.noRRF.title")}</h3>
       <p class="text-sm mt-1 leading-relaxed" style="color: var(--text-muted);">{t("gcms.calc.noRRF.body")}</p>
     </div>
@@ -98,6 +123,7 @@ const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
     </div>
 
     <div class="rounded-xl border-2 p-4" style="border-color: var(--primary); background: var(--primary-soft);">
+      <span class="inline-block text-[11px] font-extrabold uppercase tracking-wide rounded-full px-2 py-0.5 mb-2" style="background: var(--primary); color: white;">{t("gcms.needsConfirm")}</span>
       <h3 class="font-bold text-sm">{t("gcms.calc.mb.title")}</h3>
       <code class="block mt-2 mb-2 rounded-md px-3 py-2 text-sm" style="background: var(--surface); font-family: var(--font-mono);">{t("gcms.calc.mb.formula")}</code>
       <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.calc.mb.body")}</p>
@@ -117,7 +143,9 @@ const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
       <li class="flex gap-3">
         <span class="font-mono font-extrabold text-sm shrink-0" style="color: var(--accent);">1</span>
         <div>
-          <h3 class="font-bold text-sm">{t("gcms.ref.step1.title")}</h3>
+          <h3 class="font-bold text-sm">{t("gcms.ref.step1.title")}
+            <span class="inline-block text-[10px] font-extrabold uppercase tracking-wide rounded-full px-2 py-0.5 ml-1 align-middle" style="background: var(--accent); color: white;">{t("gcms.needsConfirm")}</span>
+          </h3>
           <p class="text-sm mt-0.5 leading-relaxed" style="color: var(--text-muted);">{t("gcms.ref.step1.body")}</p>
         </div>
       </li>
