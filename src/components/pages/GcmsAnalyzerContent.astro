@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const MOCKUP_URL = "https://claude.ai/code/artifact/47e8676f-fbab-45c7-91ca-e5b758eb32f6";
+const MOCKUP_URL = "https://felipiadenildo.github.io/cataliza-gcms-analyzer/";
 ---
 
 <div class="mx-auto max-w-3xl px-5 py-14">
@@ -108,8 +108,42 @@ const MOCKUP_URL = "https://claude.ai/code/artifact/47e8676f-fbab-45c7-91ca-e5b7
   <h2 class="text-lg font-extrabold mt-12 mb-3">{t("gcms.stack.title")}</h2>
   <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.stack.body")}</p>
 
+  <!-- Reference samples -->
+  <div class="rounded-xl border-2 p-5 mt-12" style="border-color: var(--accent); background: var(--accent-soft);">
+    <h2 class="text-lg font-extrabold mb-2">{t("gcms.ref.title")}</h2>
+    <p class="text-sm leading-relaxed mb-4" style="color: var(--text-muted);">{t("gcms.ref.body")}</p>
+
+    <ol class="space-y-3">
+      <li class="flex gap-3">
+        <span class="font-mono font-extrabold text-sm shrink-0" style="color: var(--accent);">1</span>
+        <div>
+          <h3 class="font-bold text-sm">{t("gcms.ref.step1.title")}</h3>
+          <p class="text-sm mt-0.5 leading-relaxed" style="color: var(--text-muted);">{t("gcms.ref.step1.body")}</p>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="font-mono font-extrabold text-sm shrink-0" style="color: var(--accent);">2</span>
+        <div>
+          <h3 class="font-bold text-sm">{t("gcms.ref.step2.title")}</h3>
+          <p class="text-sm mt-0.5 leading-relaxed" style="color: var(--text-muted);">{t("gcms.ref.step2.body")}</p>
+        </div>
+      </li>
+      <li class="flex gap-3">
+        <span class="font-mono font-extrabold text-sm shrink-0" style="color: var(--accent);">3</span>
+        <div>
+          <h3 class="font-bold text-sm">{t("gcms.ref.step3.title")}</h3>
+          <p class="text-sm mt-0.5 leading-relaxed" style="color: var(--text-muted);">{t("gcms.ref.step3.body")}</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="rounded-lg mt-4 px-4 py-3 text-sm font-semibold" style="background: var(--surface); color: var(--accent);">
+      {t("gcms.ref.howmany")}
+    </div>
+  </div>
+
   <!-- Next -->
-  <div class="rounded-xl border p-5 mt-12" style="border-color: var(--border); background: var(--surface-2);">
+  <div class="rounded-xl border p-5 mt-6" style="border-color: var(--border); background: var(--surface-2);">
     <h2 class="font-extrabold text-sm mb-2">{t("gcms.next.title")}</h2>
     <p class="text-sm leading-relaxed" style="color: var(--text-muted);">{t("gcms.next.body")}</p>
   </div>

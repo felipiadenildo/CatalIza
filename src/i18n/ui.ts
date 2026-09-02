@@ -108,6 +108,21 @@ export const ui = {
     "gcms.stack.body":
       "A web app: upload a file, get results back in the browser, nothing to install. Runs on a single computer in the lab to start, with a path to being reachable over the lab network, and to being hosted online later if that's ever needed — without a rebuild. Data stays local by default.",
 
+    "gcms.ref.title": "Reference samples we need from you",
+    "gcms.ref.body":
+      "There's no way to know if this tool's numbers are right without something real to check them against. We need actual runs where you already know the correct answer, so the automated result can be compared side by side with yours while this gets built — not after.",
+    "gcms.ref.step1.title": "1. The raw run, correctly exported and named",
+    "gcms.ref.step1.body":
+      "The file the equipment produces, exported the way you normally would for processing (as far as we know today, that's a .mzXML export from GCMSsolution — please correct us if that's not right, or if there's a more direct export path). Name it so it's traceable back to the sample — a run name or ID you'd already recognize is enough.",
+    "gcms.ref.step2.title": "2. Your own result for that exact sample",
+    "gcms.ref.step2.body":
+      "Whatever you already calculated by hand for that same run: identified compounds, retention times, areas, and the final concentration, conversion, yield, selectivity and mass balance numbers. A spreadsheet is fine — it just needs to be the real number you'd stand behind, not a rough estimate.",
+    "gcms.ref.step3.title": "3. Paired together, clearly",
+    "gcms.ref.step3.body":
+      "Send the raw file and your manual result as a pair, referencing the same sample name, so there's no ambiguity about which result belongs to which run.",
+    "gcms.ref.howmany":
+      "If at all possible, more than one sample — ideally several, already validated, covering different reaction conditions (different substrates, concentrations, or timepoints). One sample only tells us the tool works for one case; a handful across different conditions is what actually lets us trust it.",
+
     "gcms.next.title": "What happens with your feedback",
     "gcms.next.body":
       "Anything here can change: the formulas, the workflow, what counts as 'done'. Once this is validated, real development on the module resumes from an agreed starting point instead of assumptions.",
@@ -228,6 +243,21 @@ export const ui = {
     "gcms.stack.title": "Como seria construído",
     "gcms.stack.body":
       "Um aplicativo web: sobe um arquivo, o resultado volta no navegador, nada pra instalar. Roda num único computador do laboratório pra começar, com caminho pra ficar acessível pela rede do lab, e pra ser hospedado online depois se um dia precisar — sem reconstrução. Os dados ficam locais por padrão.",
+
+    "gcms.ref.title": "Amostras de referência que precisamos de você",
+    "gcms.ref.body":
+      "Não tem como saber se os números dessa ferramenta estão certos sem algo real pra conferir contra. Precisamos de corridas reais onde você já sabe a resposta correta, pra comparar o resultado automático lado a lado com o seu enquanto isso é construído — não depois.",
+    "gcms.ref.step1.title": "1. A corrida bruta, exportada e nomeada corretamente",
+    "gcms.ref.step1.body":
+      "O arquivo que o equipamento gera, exportado do jeito que você normalmente exportaria pra processar (pelo que sabemos até agora, é um export .mzXML do GCMSsolution — corrija se não for bem assim, ou se houver um caminho de exportação mais direto). Nomeie de um jeito rastreável até a amostra — um nome ou ID de corrida que você já reconheceria basta.",
+    "gcms.ref.step2.title": "2. O seu próprio resultado pra essa amostra exata",
+    "gcms.ref.step2.body":
+      "O que você já calculou à mão pra essa mesma corrida: compostos identificados, tempos de retenção, áreas, e os números finais de concentração, conversão, yield, seletividade e balanço de massa. Uma planilha serve — só precisa ser o número real que você assinaria embaixo, não uma estimativa grosseira.",
+    "gcms.ref.step3.title": "3. Pareados com clareza",
+    "gcms.ref.step3.body":
+      "Envie o arquivo bruto e o seu resultado manual como um par, referenciando o mesmo nome de amostra, pra não ter ambiguidade de qual resultado pertence a qual corrida.",
+    "gcms.ref.howmany":
+      "Se for possível, mais de uma amostra — idealmente várias, já validadas, cobrindo condições de reação diferentes (substratos, concentrações ou tempos diferentes). Uma amostra só mostra que a ferramenta funciona pra um caso; um punhado em condições diferentes é o que de fato permite confiar nela.",
 
     "gcms.next.title": "O que acontece com o seu retorno",
     "gcms.next.body":
