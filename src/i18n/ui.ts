@@ -19,90 +19,97 @@ export const ui = {
     "home.eyebrow": "CatalIza",
     "home.title": "Automating the lab, one process at a time.",
     "home.lede":
-      "CatalIza centralizes the data-processing tools used in Dra. Izadora Rhaynna Santos de Menezes's catalysis research — replacing manual spreadsheets and one-off scripts with a single, auditable platform.",
+      "CatalIza brings together the data-processing tools behind Dra. Izadora Rhaynna Santos de Menezes's catalysis research, in one place, so results stop depending on a spreadsheet only one person knows how to read.",
     "home.why.title": "Why CatalIza exists",
     "home.why.body":
-      "Reaction screening in catalysis research generates GC-MS runs faster than they can be processed by hand. Every manual transcription of a peak area or a retention time is a chance to introduce error, and a chance to lose reproducibility. CatalIza exists to make that processing systematic: the same rules applied the same way on every run, with every calculation traceable back to the raw chromatogram.",
+      "A single afternoon of reaction screening can produce more GC-MS runs than anyone can process by hand before the next one is due. Peak areas get copied over manually, retention times get eyeballed, and small inconsistencies creep in between one sample and the next. CatalIza applies the same rules to every run, and keeps every number traceable back to the chromatogram it came from.",
     "home.who.title": "Idealized by Dra. Izadora Rhaynna Santos de Menezes",
     "home.who.body":
-      "Researcher in catalysis, currently designing single-atom photocatalysts. CatalIza grew directly out of her own lab workflow — shaped by the actual bottlenecks of processing reaction-screening series, not designed in the abstract.",
-    "home.status.title": "Where this stands right now",
+      "A catalysis researcher currently working on single-atom photocatalysts, Izadora built the case for CatalIza out of her own bench work — the tool follows the actual bottlenecks of running reaction-screening series, not a guess at what a lab might need.",
+    "home.status.title": "Where things stand",
     "home.status.body":
-      "This site currently documents the proposal for the first module (GC-MS Analyzer) so it can be reviewed and validated before development continues. It is not yet the working tool.",
+      "Right now this site holds the proposal for the first module, GC-MS Analyzer, open for review before development goes further. The working tool isn't built yet.",
     "home.modules.title": "Modules",
     "home.card.gcms.title": "GC-MS Analyzer",
     "home.card.gcms.desc":
-      "Upload one or many GC-MS runs, get automatic peak identification, quantification against an internal standard, and full reaction metrics — conversion, yield, selectivity, mass balance.",
+      "Upload GC-MS runs and get peak identification, quantification against an internal standard, and the reaction metrics that follow from them — conversion, yield, selectivity, mass balance.",
     "home.card.gcms.status": "Proposal under review",
     "home.card.gcms.cta": "Read the proposal",
     "home.card.fps.title": "FPS Calculator",
-    "home.card.fps.desc": "A future module. Not scoped yet.",
+    "home.card.fps.desc": "A future module, not scoped yet.",
     "home.card.fps.cta": "Planned",
 
     "gcms.eyebrow": "Module proposal",
     "gcms.title": "GC-MS Analyzer",
     "gcms.status.badge": "Proposal — not yet built. This page exists for review, not use.",
     "gcms.lede":
-      "This page is the working proposal for the first CatalIza module: a tool that takes raw GC-MS runs and turns them into reaction metrics — conversion, yield, selectivity, mass balance — without manual spreadsheet work. Everything below is open for correction: the workflow, the identification method, and especially the formulas.",
+      "This is the working proposal for the first CatalIza module: raw GC-MS runs in, reaction metrics out — conversion, yield, selectivity, mass balance — without a spreadsheet in between. The workflow, the identification method and the formulas below are all still open for correction.",
 
     "gcms.howto.title": "How to review this",
     "gcms.howto.read.title": "Read it",
-    "gcms.howto.read.body": "This page is the whole proposal — the problem, the proposed workflow, how compounds get identified, and every formula the tool would compute.",
+    "gcms.howto.read.body": "The problem this is solving, the proposed workflow, how a peak gets identified, and every formula the tool would compute.",
     "gcms.howto.try.title": "Try it",
-    "gcms.howto.try.body": "Open the interactive preview linked below, add the demo files, run one, expand it, edit a field or two. It's built to be clicked through, not just looked at.",
-    "gcms.howto.flag.title": "Look at the flagged spots",
-    "gcms.howto.flag.body": "A few boxes below are marked \"Please confirm\" — those are places where this needs your judgment as the domain expert, not just a read-through.",
-    "gcms.howto.reply.title": "Send your notes back",
-    "gcms.howto.reply.body": "Just reply to the email this came in — agree, disagree, correct something, or say it looks right. No particular format needed.",
+    "gcms.howto.try.body": "The interactive preview linked below runs on made-up data, but the interactions are real: add the demo files, run one, expand it, edit a field.",
+    "gcms.howto.flag.title": "Check the flagged spots",
+    "gcms.howto.flag.body": "A handful of boxes below are marked \"Please confirm\" — decisions that need your judgment as the chemist, not just a read-through from me.",
+    "gcms.howto.reply.title": "Send it back",
+    "gcms.howto.reply.body": "Reply to the email this came in with whatever you think — agreement, corrections, or a flat \"this is wrong.\" No format needed.",
 
     "gcms.needsConfirm": "Please confirm",
 
     "gcms.problem.title": "The problem",
     "gcms.problem.body":
-      "Each reaction-screening run produces a chromatogram that has to be read manually: find the peaks, match them to known compounds, look up or estimate a response factor, and carry all of that through to conversion, yield and mass balance by hand. It works, but it doesn't scale past a handful of samples, and every manual step is a place where two people would get two different numbers from the same raw file.",
+      "Every reaction-screening run turns into a chromatogram that someone has to read by hand: find the peaks, match each one to a known compound, track down or guess a response factor, then carry all of it through to conversion, yield and mass balance. It works for one sample. It stops working somewhere around the tenth, and two people reading the same raw file rarely land on exactly the same numbers.",
 
     "gcms.flow.title": "Proposed workflow",
     "gcms.flow.body":
-      "Upload one file or many at once — the interface behaves the same either way. A shared configuration at the top applies to every file; each file can still be adjusted individually. Nothing runs automatically: you review a file, then run it.",
+      "One file or twenty, the screen works the same way. A shared configuration up top applies to everything; any file can still be adjusted on its own. Nothing runs by itself — you look at a file, then you run it.",
     "gcms.flow.step1.title": "1. Upload",
-    "gcms.flow.step1.body": "Drop one or several .mzXML files. Each becomes its own block in a list.",
-    "gcms.flow.step2.title": "2. Review & run",
+    "gcms.flow.step1.body": "Drop in one .mzXML file or several at once. Each one gets its own block in the list below.",
+    "gcms.flow.step2.title": "2. Review, then run",
     "gcms.flow.step2.body":
-      "Set shared defaults once at the top. Each file block can still override them. Click run on a block when it's ready.",
-    "gcms.flow.step3.title": "3. Inspect what was inferred",
+      "Shared defaults get set once, at the top. Any block can still override them on its own. Run it whenever it's ready.",
+    "gcms.flow.step3.title": "3. Check what got inferred",
     "gcms.flow.step3.body":
-      "After processing, each block already shows a best guess at substrate, main product, byproducts and internal standard — pulled from the peaks that were identified. Every inferred value is editable right there, and clearly marked as a suggestion until confirmed.",
-    "gcms.flow.step4.title": "4. Adjust in detail if needed",
+      "Once a file's been processed, its block already has a guess at substrate, main product, byproducts and internal standard, pulled from the peaks it found. Every one of those is editable on the spot, and stays marked as a suggestion until you touch it.",
+    "gcms.flow.step4.title": "4. Adjust the details",
     "gcms.flow.step4.body":
-      "Expand a block to see the chromatogram and the full peak table, and adjust integration bounds or a compound assignment for that one file, without touching the shared configuration.",
+      "Expand a block for the chromatogram and the full peak table. Integration bounds and compound assignments can be fixed for that one file without touching anything shared.",
     "gcms.flow.step5.title": "5. Export",
-    "gcms.flow.step5.body": "Download one consolidated file across every run, or export a single run on its own.",
+    "gcms.flow.step5.body": "One consolidated file for everything that's been run, or a single run on its own.",
     "gcms.flow.preview.cta": "Open the interactive preview",
     "gcms.flow.preview.note":
-      "Built with placeholder data to test the workflow, not the real pipeline. This is the artifact to click through and react to.",
+      "Made-up data standing in for a real pipeline — this is for reacting to the workflow, not for trusting the numbers.",
 
     "gcms.id.title": "How a peak gets identified",
     "gcms.id.body":
-      "Each detected peak is matched by retention time against a reference library of known compounds (name, expected RT, response factor, role). When two candidates fall in overlapping RT windows, the closer one wins. A compound not in the library is left unidentified rather than guessed at.",
-    "gcms.id.caveat.title": "What this doesn't do yet",
+      "Every detected peak gets compared, by retention time, against a reference library — name, expected RT, a tolerance window around it, response factor, role. Two candidates in overlapping windows? The closer one wins. Nothing in the library close enough? The peak stays unidentified instead of getting a guess.",
+    "gcms.id.tolerance.title": "About that tolerance window",
+    "gcms.id.tolerance.body":
+      "Retention time drifts a little between runs — column aging, small temperature or flow variations — and two compounds can also elute close enough to interfere with each other. Right now each compound in the library carries its own tolerance, set from what we've seen in your equipment's real runs. Whether that's wide enough, or too wide for compounds that sit close together, is worth a second opinion.",
+    "gcms.id.caveat.title": "What's missing",
     "gcms.id.caveat.body":
-      "Matching by mass spectrum (not just retention time) is designed but not connected — it would raise confidence, especially for compounds whose retention time drifts slightly between runs. Worth discussing whether it's needed for the first version or can wait.",
+      "Identification by mass spectrum, not just retention time, is designed into the pipeline already but not wired up. It would help most for compounds whose RT isn't fully stable between runs. Whether that's needed for a first working version, or can be added once the RT-only approach shows its limits, is an open question.",
 
     "gcms.calc.title": "The calculations",
     "gcms.calc.body":
-      "This is the section that most needs a domain expert's eyes. Below is exactly what gets computed and why, so it can be checked against how you actually reason about a reaction screen — not just whether the code runs.",
+      "This is the part that needs your eyes most. What follows is exactly what gets computed and why, laid out to be checked against how you'd actually work through a reaction screen — not just whether the code runs without errors.",
 
-    "gcms.calc.rrf.title": "Concentration via internal standard",
+    "gcms.calc.is.title": "The internal standard it's all built on",
+    "gcms.calc.is.body":
+      "Every concentration below starts from an area ratio against the internal standard, so the standard's own quality matters more than any single formula. The usual criteria: its retention time sits far enough from every analyte to avoid interference, ideally more than 15% apart; it shows up at roughly the same concentration in every sample; a deuterated version of the actual analyte, when one's available, beats an unrelated compound. Dodecane is what's set as the default IS in the library right now — whether it holds up against those criteria for the reactions you're running is worth a direct answer.",
+
+    "gcms.calc.rrf.title": "Concentration from the internal standard",
     "gcms.calc.rrf.body":
-      "When a compound has a known relative response factor (RRF), its concentration is derived from the ratio of its peak area to the internal standard's:",
+      "With a known relative response factor (RRF) for a compound, its concentration comes straight from the ratio between its peak area and the standard's:",
     "gcms.calc.rrf.formula": "C = (A / A_IS) × (1 / RRF) × C_IS",
-    "gcms.calc.calib.title": "Concentration via calibration curve",
-    "gcms.calc.calib.body": "When a real calibration curve exists for a compound, it's used instead of an assumed RRF:",
+    "gcms.calc.calib.title": "Concentration from a calibration curve",
+    "gcms.calc.calib.body": "When there's an actual calibration curve for a compound, it takes over instead of an assumed RRF:",
     "gcms.calc.calib.formula": "C = ((A/A_IS − b) / m) × C_IS",
 
-    "gcms.calc.noRRF.title": "When there is no RRF or calibration at all",
+    "gcms.calc.noRRF.title": "When neither RRF nor calibration exists",
     "gcms.calc.noRRF.body":
-      "Not every compound in a screen has a known response factor — that's the normal case, not an edge case. The proposal is: fall back to RRF = 1 (area ratio treated as concentration ratio), but mark that result explicitly as semi-quantitative, distinct from a calibrated number. A more advanced fallback exists in the literature (Effective Carbon Number, used in flame-ionization detection to estimate response from molecular structure), but it doesn't transfer cleanly to mass spectrometry and shouldn't be presented with the same confidence as real calibration data. Open question: is RRF=1 with a clear semi-quantitative flag good enough for how these numbers get used, or is something more is needed here?",
+      "Most compounds in a screen won't have a measured response factor — that's the default situation, not the exception. The proposal here is to fall back to RRF = 1 (area ratio read straight as concentration ratio) and mark the result semi-quantitative, visibly different from a calibrated number. There's a more rigorous fallback in the literature — Effective Carbon Number, which estimates response from molecular structure — but it was built for flame-ionization detection, where response tracks reduced carbon count directly; mass spectrometry responses vary too much between compounds for the same trick to transfer cleanly, so it shouldn't be dressed up as more reliable than it is. The real question: does RRF = 1 with a clear semi-quantitative label hold up for what these numbers get used for, or does this need something sturdier?",
 
     "gcms.calc.conv.title": "Substrate conversion",
     "gcms.calc.conv.formula": "X (%) = (C₀ − C_substrate) / C₀ × 100",
@@ -111,37 +118,41 @@ export const ui = {
     "gcms.calc.sel.title": "Selectivity",
     "gcms.calc.sel.formula": "S (%) = Y / X × 100",
 
+    "gcms.calc.future.title": "Also sitting in the pipeline, unused",
+    "gcms.calc.future.body":
+      "Turnover number, turnover frequency and enantiomeric excess already have working formulas in the code, just not wired into a screen yet. If any of these matter for how you report results, it's worth saying so now rather than after the interface is built around their absence.",
+
     "gcms.calc.mb.title": "Mass balance",
     "gcms.calc.mb.formula": "MB (%) = (C_substrate + Σ C_products / ν) / C₀ × 100",
     "gcms.calc.mb.body":
-      "This one is worth double-checking specifically: it's normalized against the initial charge (C₀), not the amount consumed. An earlier version of this normalized by the consumed amount instead, which looks fine at high conversion but becomes unstable at low conversion — exactly the range a lot of catalytic screening happens in. Please confirm this is the convention you'd expect a result to be reported in.",
+      "Worth a close look specifically: this is normalized against the initial charge (C₀), not the amount consumed. It wasn't always — an earlier version divided by the consumed amount, which looks reasonable at high conversion and turns unstable at low conversion, exactly where a lot of catalytic screening sits. Is C₀ the denominator you'd expect a reported result to use?",
 
-    "gcms.stack.title": "How it would be built",
+    "gcms.stack.title": "How it would run",
     "gcms.stack.body":
-      "A web app: upload a file, get results back in the browser, nothing to install. Runs on a single computer in the lab to start, with a path to being reachable over the lab network, and to being hosted online later if that's ever needed — without a rebuild. Data stays local by default.",
+      "A web page: a file goes up, results come back in the browser, nothing to install. Starts on one computer in the lab, with room to grow into being reachable from the rest of the lab network, and hosted online later if that's ever needed, without starting over. Data stays on that machine by default.",
 
-    "gcms.ref.title": "Reference samples we need from you",
+    "gcms.ref.title": "Reference samples, from you",
     "gcms.ref.body":
-      "There's no way to know if this tool's numbers are right without something real to check them against. We need actual runs where you already know the correct answer, so the automated result can be compared side by side with yours while this gets built — not after.",
-    "gcms.ref.step1.title": "1. The raw run, correctly exported and named",
+      "There's no way to know if this tool gets the right numbers without something real to check it against. What's needed is a run where you already know the correct answer, so the automated result can sit next to yours while this is still being built, not after it's finished.",
+    "gcms.ref.step1.title": "1. The raw run, exported and named right",
     "gcms.ref.step1.body":
-      "The file the equipment produces, exported the way you normally would for processing (as far as we know today, that's a .mzXML export from GCMSsolution — please correct us if that's not right, or if there's a more direct export path). Name it so it's traceable back to the sample — a run name or ID you'd already recognize is enough.",
-    "gcms.ref.step2.title": "2. Your own result for that exact sample",
+      "Whatever the equipment produces, exported the way you'd normally export it for processing — as far as we can tell that's a .mzXML file out of GCMSsolution, but correct us if that's off, or if there's a more direct path. Name it so it points back to the sample; a run name or ID you'd already recognize is enough.",
+    "gcms.ref.step2.title": "2. What you already calculated for it",
     "gcms.ref.step2.body":
-      "Whatever you already calculated by hand for that same run: identified compounds, retention times, areas, and the final concentration, conversion, yield, selectivity and mass balance numbers. A spreadsheet is fine — it just needs to be the real number you'd stand behind, not a rough estimate.",
-    "gcms.ref.step3.title": "3. Paired together, clearly",
+      "Whatever's already been worked out by hand for that same run: which compounds, at what retention times and areas, and the resulting concentration, conversion, yield, selectivity, mass balance. A spreadsheet works fine, as long as it's the number you'd stand behind, not a quick estimate.",
+    "gcms.ref.step3.title": "3. Both together, clearly paired",
     "gcms.ref.step3.body":
-      "Send the raw file and your manual result as a pair, referencing the same sample name, so there's no ambiguity about which result belongs to which run.",
+      "The raw file and the manual result, referencing the same sample name, so there's never a question of which belongs to which.",
     "gcms.ref.howmany":
-      "If at all possible, more than one sample — ideally several, already validated, covering different reaction conditions (different substrates, concentrations, or timepoints). One sample only tells us the tool works for one case; a handful across different conditions is what actually lets us trust it.",
+      "More than one sample if there's any way to spare them — several, already validated, spanning different reaction conditions: different substrates, concentrations, timepoints. One sample proves the tool works once. A handful across different conditions is what actually earns trust.",
 
-    "gcms.next.title": "What happens with your feedback",
+    "gcms.next.title": "What happens with the feedback",
     "gcms.next.body":
-      "Anything here can change: the formulas, the workflow, what counts as 'done'. Once this is validated, real development on the module resumes from an agreed starting point instead of assumptions.",
+      "Every formula, every step of the workflow, every definition of \"done\" here can still change. Once this gets a green light, or a set of corrections, real development picks up from that agreed starting point instead of from a guess.",
 
     "fps.eyebrow": "Module",
     "fps.title": "FPS Calculator",
-    "fps.body": "Planned as a future CatalIza module. Not scoped yet — nothing to review here yet.",
+    "fps.body": "A future CatalIza module, not scoped out yet — there's nothing here to review.",
     "fps.back": "Back to Home",
 
     "contact.eyebrow": "Get in touch",
@@ -167,129 +178,140 @@ export const ui = {
     "home.eyebrow": "CatalIza",
     "home.title": "Automatizando o laboratório, um processo de cada vez.",
     "home.lede":
-      "A CatalIza centraliza as ferramentas de processamento de dados usadas na pesquisa em catálise da Dra. Izadora Rhaynna Santos de Menezes — substituindo planilhas manuais e scripts avulsos por uma única plataforma auditável.",
+      "A CatalIza reúne num só lugar as ferramentas de processamento de dados da pesquisa em catálise da Dra. Izadora Rhaynna Santos de Menezes, para que o resultado pare de depender de uma planilha que só uma pessoa sabe interpretar.",
     "home.why.title": "Por que a CatalIza existe",
     "home.why.body":
-      "O screening de reações em pesquisa catalítica gera corridas de GC-MS mais rápido do que dá pra processar à mão. Cada transcrição manual de uma área de pico ou tempo de retenção é uma chance de erro — e de perder reprodutibilidade. A CatalIza existe pra tornar esse processamento sistemático: as mesmas regras aplicadas do mesmo jeito em toda corrida, com cada cálculo rastreável até o cromatograma bruto.",
+      "Uma única tarde de triagem de reações pode gerar mais corridas de GC-MS do que dá tempo de processar antes da próxima. A área de cada pico é copiada à mão, o tempo de retenção é lido no olho, e pequenas inconsistências vão se acumulando de uma amostra pra outra. A CatalIza aplica a mesma regra em toda corrida e mantém cada número rastreável até o cromatograma de onde ele veio.",
     "home.who.title": "Idealizada pela Dra. Izadora Rhaynna Santos de Menezes",
     "home.who.body":
-      "Pesquisadora em catálise, atualmente desenvolvendo fotocatalisadores single-atom. A CatalIza nasceu diretamente do próprio fluxo de trabalho dela no laboratório — moldada pelos gargalos reais de processar séries de screening de reação, não desenhada de forma abstrata.",
+      "Pesquisadora em catálise, hoje trabalhando com fotocatalisadores single-atom, a Izadora construiu a ideia da CatalIza a partir da própria bancada — a ferramenta segue os gargalos reais de rodar uma série de triagem, não um palpite sobre o que um laboratório pode precisar.",
     "home.status.title": "Onde isso está agora",
     "home.status.body":
-      "Este site hoje documenta a proposta do primeiro módulo (GC-MS Analyzer) pra ser revisada e validada antes de o desenvolvimento continuar. Ainda não é a ferramenta funcionando.",
+      "Por enquanto este site traz a proposta do primeiro módulo, o GC-MS Analyzer, aberta pra avaliação antes do desenvolvimento seguir adiante. A ferramenta funcionando ainda não existe.",
     "home.modules.title": "Módulos",
     "home.card.gcms.title": "GC-MS Analyzer",
     "home.card.gcms.desc":
-      "Suba uma ou várias corridas de GC-MS, tenha identificação automática de picos, quantificação contra padrão interno e as métricas completas da reação — conversão, yield, seletividade, balanço de massa.",
+      "Sobe corridas de GC-MS e recebe de volta identificação de picos, quantificação contra padrão interno, e as métricas de reação que vêm daí — conversão, rendimento, seletividade, balanço de massa.",
     "home.card.gcms.status": "Proposta em avaliação",
     "home.card.gcms.cta": "Ler a proposta",
     "home.card.fps.title": "FPS Calculator",
-    "home.card.fps.desc": "Um módulo futuro. Ainda sem escopo definido.",
+    "home.card.fps.desc": "Um módulo futuro, ainda sem escopo definido.",
     "home.card.fps.cta": "Planejado",
 
     "gcms.eyebrow": "Proposta de módulo",
     "gcms.title": "GC-MS Analyzer",
-    "gcms.status.badge": "Proposta — ainda não construída. Esta página existe pra revisão, não pra uso.",
+    "gcms.status.badge": "Proposta — ainda não construída. Esta página é pra revisar, não pra usar.",
     "gcms.lede":
-      "Esta página é a proposta de trabalho do primeiro módulo da CatalIza: uma ferramenta que pega corridas brutas de GC-MS e transforma em métricas de reação — conversão, yield, seletividade, balanço de massa — sem trabalho manual de planilha. Tudo abaixo está aberto a correção: o fluxo, o método de identificação, e principalmente as fórmulas.",
+      "Essa é a proposta de trabalho do primeiro módulo da CatalIza: corrida bruta de GC-MS entra, métrica de reação sai — conversão, rendimento, seletividade, balanço de massa — sem passar por planilha no meio. O fluxo, o jeito de identificar os picos e as fórmulas aqui embaixo, tudo ainda está aberto a correção.",
 
     "gcms.howto.title": "Como avaliar isso",
     "gcms.howto.read.title": "Leia",
-    "gcms.howto.read.body": "Esta página é a proposta inteira — o problema, o fluxo proposto, como os compostos são identificados, e cada fórmula que a ferramenta calcularia.",
+    "gcms.howto.read.body": "O problema que isso resolve, o fluxo proposto, como um pico é identificado, e cada fórmula que a ferramenta calcularia.",
     "gcms.howto.try.title": "Teste",
-    "gcms.howto.try.body": "Abra a prévia interativa linkada abaixo, adicione os arquivos de exemplo, rode um, expanda, edite um campo ou dois. Ela foi feita pra ser clicada, não só olhada.",
+    "gcms.howto.try.body": "A prévia interativa linkada abaixo roda em cima de dado inventado, mas a interação é real: adiciona os arquivos de exemplo, roda um, expande, edita um campo.",
     "gcms.howto.flag.title": "Repare nos pontos marcados",
-    "gcms.howto.flag.body": "Algumas caixas abaixo estão marcadas \"Por favor confirme\" — são pontos onde isso precisa do seu julgamento como especialista do domínio, não só de uma leitura.",
-    "gcms.howto.reply.title": "Mande seu retorno",
-    "gcms.howto.reply.body": "Basta responder o e-mail em que isso chegou — concordando, discordando, corrigindo algo, ou dizendo que está certo. Não precisa de formato específico.",
+    "gcms.howto.flag.body": "Algumas caixas aqui embaixo estão marcadas \"Por favor confirme\" — são decisões que precisam do seu julgamento como química, não só de uma leitura minha.",
+    "gcms.howto.reply.title": "Manda de volta",
+    "gcms.howto.reply.body": "Responde o e-mail em que isso chegou com o que você achar — concordando, corrigindo, ou só dizendo que está errado. Não precisa de formato nenhum.",
 
     "gcms.needsConfirm": "Por favor confirme",
 
     "gcms.problem.title": "O problema",
     "gcms.problem.body":
-      "Cada corrida de screening de reação produz um cromatograma que precisa ser lido manualmente: achar os picos, associar a compostos conhecidos, buscar ou estimar um fator de resposta, e carregar tudo isso até conversão, yield e balanço de massa à mão. Funciona, mas não escala além de um punhado de amostras, e cada passo manual é um lugar onde duas pessoas tirariam dois números diferentes do mesmo arquivo bruto.",
+      "Toda corrida de triagem de reação vira um cromatograma que alguém tem que ler à mão: achar os picos, associar cada um a um composto conhecido, buscar ou chutar um fator de resposta, e daí levar tudo isso até conversão, rendimento e balanço de massa. Funciona pra uma amostra. Para de funcionar lá pela décima, e dificilmente duas pessoas lendo o mesmo arquivo bruto chegam exatamente no mesmo número.",
 
     "gcms.flow.title": "Fluxo proposto",
     "gcms.flow.body":
-      "Suba um arquivo ou vários de uma vez — a interface se comporta igual nos dois casos. Uma configuração compartilhada no topo se aplica a todos os arquivos; cada um ainda pode ser ajustado individualmente. Nada roda automaticamente: você revisa um arquivo, depois roda.",
+      "Um arquivo ou vinte, a tela funciona do mesmo jeito. Uma configuração compartilhada lá em cima vale pra tudo; qualquer arquivo ainda pode ser ajustado sozinho. Nada roda por conta própria — você olha o arquivo, depois roda.",
     "gcms.flow.step1.title": "1. Upload",
-    "gcms.flow.step1.body": "Solte um ou vários arquivos .mzXML. Cada um vira um bloco próprio numa lista.",
-    "gcms.flow.step2.title": "2. Revisar e rodar",
+    "gcms.flow.step1.body": "Solta um arquivo .mzXML ou vários de uma vez. Cada um ganha seu próprio bloco na lista.",
+    "gcms.flow.step2.title": "2. Revisar, depois rodar",
     "gcms.flow.step2.body":
-      "Defina os padrões compartilhados uma vez, no topo. Cada bloco de arquivo ainda pode sobrescrever. Clique em rodar num bloco quando estiver pronto.",
+      "Os padrões compartilhados são definidos uma vez, lá em cima. Qualquer bloco ainda pode sobrescrever por conta própria. Roda quando estiver pronto.",
     "gcms.flow.step3.title": "3. Conferir o que foi inferido",
     "gcms.flow.step3.body":
-      "Depois de processar, cada bloco já mostra um palpite de substrato, produto principal, subprodutos e padrão interno — tirado dos picos identificados. Todo valor inferido é editável ali mesmo, e claramente marcado como sugestão até ser confirmado.",
-    "gcms.flow.step4.title": "4. Ajustar em detalhe se precisar",
+      "Depois de processado, o bloco já traz um palpite de substrato, produto principal, subprodutos e padrão interno, tirado dos picos que encontrou. Cada um desses campos é editável na hora, e continua marcado como sugestão até você mexer nele.",
+    "gcms.flow.step4.title": "4. Ajustar os detalhes",
     "gcms.flow.step4.body":
-      "Expanda um bloco pra ver o cromatograma e a tabela completa de picos, e ajuste limites de integração ou a atribuição de um composto só naquele arquivo, sem mexer na configuração compartilhada.",
+      "Expande o bloco pra ver o cromatograma e a tabela inteira de picos. Dá pra corrigir limite de integração e atribuição de composto só naquele arquivo, sem mexer em nada compartilhado.",
     "gcms.flow.step5.title": "5. Exportar",
-    "gcms.flow.step5.body": "Baixe um arquivo consolidado de todas as corridas, ou exporte uma corrida individual.",
+    "gcms.flow.step5.body": "Um arquivo consolidado com tudo que já rodou, ou uma corrida sozinha.",
     "gcms.flow.preview.cta": "Abrir a prévia interativa",
     "gcms.flow.preview.note":
-      "Construída com dados fictícios pra testar o fluxo, não o pipeline real. É o artefato pra clicar e reagir.",
+      "Dado inventado no lugar de um pipeline de verdade — serve pra reagir ao fluxo, não pra confiar nos números.",
 
     "gcms.id.title": "Como um pico é identificado",
     "gcms.id.body":
-      "Cada pico detectado é comparado por tempo de retenção com uma biblioteca de referência de compostos conhecidos (nome, RT esperado, fator de resposta, papel). Quando dois candidatos caem em janelas de RT sobrepostas, o mais próximo vence. Um composto fora da biblioteca fica sem identificação em vez de ser chutado.",
-    "gcms.id.caveat.title": "O que isso ainda não faz",
+      "Todo pico detectado é comparado, por tempo de retenção, com uma biblioteca de referência — nome, RT esperado, uma janela de tolerância em volta dele, fator de resposta, papel. Dois candidatos caem na mesma janela? Ganha o mais próximo. Nada na biblioteca chega perto? O pico fica sem identificação, em vez de levar um chute.",
+    "gcms.id.tolerance.title": "Sobre essa janela de tolerância",
+    "gcms.id.tolerance.body":
+      "O tempo de retenção varia um pouco de corrida pra corrida — coluna envelhecendo, pequena variação de temperatura ou fluxo — e dois compostos também podem sair perto o suficiente pra interferir um no outro. Hoje cada composto da biblioteca carrega sua própria tolerância, ajustada pelo que vimos nas corridas reais do seu equipamento. Se isso está largo o bastante, ou largo demais pra compostos que saem próximos, é algo que vale uma segunda opinião sua.",
+    "gcms.id.caveat.title": "O que ainda falta",
     "gcms.id.caveat.body":
-      "Matching por espectro de massa (não só tempo de retenção) está desenhado mas não conectado — aumentaria a confiança, principalmente pra compostos cujo RT varia um pouco entre corridas. Vale discutir se isso é necessário pra primeira versão ou pode esperar.",
+      "Identificação por espectro de massa, não só por tempo de retenção, já está desenhada no pipeline mas não está ligada. Ajudaria mais justamente nos compostos cujo RT não é totalmente estável entre corridas. Se isso é necessário pra uma primeira versão funcionando, ou pode entrar depois que o RT sozinho mostrar seus limites, é uma pergunta em aberto.",
 
     "gcms.calc.title": "Os cálculos",
     "gcms.calc.body":
-      "Esta é a seção que mais precisa do olhar de uma especialista do domínio. Abaixo está exatamente o que é calculado e por quê, pra poder ser conferido contra como você de fato raciocina sobre um screening de reação — não só se o código roda.",
+      "Essa é a parte que mais precisa do seu olhar. O que vem a seguir é exatamente o que é calculado e por quê, pensado pra ser conferido contra como você de fato resolveria uma triagem de reação — não só se o código roda sem erro.",
 
-    "gcms.calc.rrf.title": "Concentração via padrão interno",
+    "gcms.calc.is.title": "O padrão interno em que tudo se apoia",
+    "gcms.calc.is.body":
+      "Toda concentração aqui embaixo parte de uma razão de área contra o padrão interno, então a qualidade desse padrão pesa mais do que qualquer fórmula sozinha. O critério de sempre: o tempo de retenção dele fica longe o bastante de todo analito pra não interferir, de preferência mais de 15% de diferença; ele aparece em concentração parecida em toda amostra; uma versão deuterada do próprio analito, quando existe, vence um composto qualquer sem relação. Hoje o dodecano está definido como padrão interno padrão na biblioteca — se ele se sustenta contra esse critério pras reações que você roda é algo que vale uma resposta direta sua.",
+
+    "gcms.calc.rrf.title": "Concentração a partir do padrão interno",
     "gcms.calc.rrf.body":
-      "Quando um composto tem um fator de resposta relativa (RRF) conhecido, a concentração é derivada da razão entre a área do pico e a do padrão interno:",
+      "Com um fator de resposta relativa (RRF) conhecido pra um composto, a concentração sai direto da razão entre a área do pico dele e a do padrão:",
     "gcms.calc.rrf.formula": "C = (A / A_IS) × (1 / RRF) × C_IS",
-    "gcms.calc.calib.title": "Concentração via curva de calibração",
-    "gcms.calc.calib.body": "Quando existe uma curva de calibração real pra um composto, ela é usada em vez de um RRF assumido:",
+    "gcms.calc.calib.title": "Concentração a partir de uma curva de calibração",
+    "gcms.calc.calib.body": "Quando existe uma curva de calibração de verdade pra um composto, ela assume o lugar do RRF assumido:",
     "gcms.calc.calib.formula": "C = ((A/A_IS − b) / m) × C_IS",
 
-    "gcms.calc.noRRF.title": "Quando não há RRF nem calibração nenhuma",
+    "gcms.calc.noRRF.title": "Quando não existe nem RRF nem calibração",
     "gcms.calc.noRRF.body":
-      "Nem todo composto num screening tem fator de resposta conhecido — esse é o caso normal, não a exceção. A proposta é: cair pra RRF = 1 (razão de área tratada como razão de concentração), mas marcar esse resultado explicitamente como semi-quantitativo, diferente de um número calibrado. Existe um fallback mais avançado na literatura (Effective Carbon Number, usado em detecção por ionização de chama pra estimar resposta a partir da estrutura molecular), mas ele não se aplica diretamente a espectrometria de massa e não deveria ser apresentado com a mesma confiança de um dado de calibração real. Pergunta em aberto: RRF=1 com um sinalizador claro de semi-quantitativo é suficiente pro jeito que esses números vão ser usados, ou precisa de algo mais aqui?",
+      "A maioria dos compostos numa triagem não vai ter fator de resposta medido — essa é a situação padrão, não a exceção. A proposta aqui é cair pra RRF = 1 (razão de área lida direto como razão de concentração) e marcar o resultado como semi-quantitativo, visivelmente diferente de um número calibrado. Existe um fallback mais rigoroso na literatura — Effective Carbon Number, que estima a resposta a partir da estrutura molecular — mas ele foi pensado pra detecção por ionização de chama, onde a resposta segue direto a contagem de carbono reduzido; em espectrometria de massa a resposta varia demais de composto pra composto pro mesmo truque valer, então não faria sentido apresentar isso como mais confiável do que realmente é. A pergunta de verdade: RRF = 1 com o rótulo de semi-quantitativo bem claro se sustenta pro uso que esses números vão ter, ou precisa de algo mais robusto?",
 
     "gcms.calc.conv.title": "Conversão do substrato",
     "gcms.calc.conv.formula": "X (%) = (C₀ − C_substrato) / C₀ × 100",
-    "gcms.calc.yield.title": "Yield do produto",
+    "gcms.calc.yield.title": "Rendimento do produto",
     "gcms.calc.yield.formula": "Y (%) = C_produto / C_max × 100",
     "gcms.calc.sel.title": "Seletividade",
     "gcms.calc.sel.formula": "S (%) = Y / X × 100",
 
+    "gcms.calc.future.title": "Também parado no pipeline, sem uso",
+    "gcms.calc.future.body":
+      "Turnover number, turnover frequency e excesso enantiomérico já têm fórmula funcionando no código, só não estão ligados em nenhuma tela ainda. Se algum desses importa pro jeito que você reporta resultado, vale dizer isso agora, antes da interface ficar pronta sem eles.",
+
     "gcms.calc.mb.title": "Balanço de massa",
     "gcms.calc.mb.formula": "MB (%) = (C_substrato + Σ C_produtos / ν) / C₀ × 100",
     "gcms.calc.mb.body":
-      "Esse vale conferir com atenção especial: é normalizado pela carga inicial (C₀), não pela quantidade consumida. Uma versão anterior normalizava pelo consumido, o que parece bem em conversão alta mas fica instável em conversão baixa — exatamente a faixa onde acontece boa parte do screening catalítico. Por favor confirme se essa é a convenção que você esperaria ver num resultado reportado.",
+      "Esse vale olhar com atenção redobrada: está normalizado pela carga inicial (C₀), não pela quantidade consumida. Nem sempre foi assim — uma versão anterior dividia pelo consumido, o que parece razoável em conversão alta e fica instável em conversão baixa, bem onde boa parte da triagem catalítica acontece. C₀ é o denominador que você esperaria ver num resultado reportado?",
 
-    "gcms.stack.title": "Como seria construído",
+    "gcms.stack.title": "Como isso rodaria",
     "gcms.stack.body":
-      "Um aplicativo web: sobe um arquivo, o resultado volta no navegador, nada pra instalar. Roda num único computador do laboratório pra começar, com caminho pra ficar acessível pela rede do lab, e pra ser hospedado online depois se um dia precisar — sem reconstrução. Os dados ficam locais por padrão.",
+      "Uma página web: sobe um arquivo, o resultado volta no navegador, nada pra instalar. Começa num computador só do laboratório, com espaço pra crescer e ficar acessível pelo resto da rede do lab, e ser hospedado online depois se um dia precisar, sem recomeçar do zero. O dado fica naquela máquina por padrão.",
 
-    "gcms.ref.title": "Amostras de referência que precisamos de você",
+    "gcms.ref.title": "Amostras de referência, suas",
     "gcms.ref.body":
-      "Não tem como saber se os números dessa ferramenta estão certos sem algo real pra conferir contra. Precisamos de corridas reais onde você já sabe a resposta correta, pra comparar o resultado automático lado a lado com o seu enquanto isso é construído — não depois.",
-    "gcms.ref.step1.title": "1. A corrida bruta, exportada e nomeada corretamente",
+      "Não tem como saber se essa ferramenta acerta o número sem algo real pra conferir contra. O que falta é uma corrida onde você já sabe a resposta certa, pra colocar o resultado automático ao lado do seu enquanto isso ainda está sendo construído, não depois de pronto.",
+    "gcms.ref.step1.title": "1. A corrida bruta, exportada e nomeada direito",
     "gcms.ref.step1.body":
-      "O arquivo que o equipamento gera, exportado do jeito que você normalmente exportaria pra processar (pelo que sabemos até agora, é um export .mzXML do GCMSsolution — corrija se não for bem assim, ou se houver um caminho de exportação mais direto). Nomeie de um jeito rastreável até a amostra — um nome ou ID de corrida que você já reconheceria basta.",
-    "gcms.ref.step2.title": "2. O seu próprio resultado pra essa amostra exata",
+      "O que o equipamento gera, exportado do jeito que você normalmente exportaria pra processar — pelo que dá pra saber daqui, é um arquivo .mzXML saindo do GCMSsolution, mas corrija se estiver errado, ou se houver um caminho mais direto. Nomeie de um jeito que aponte de volta pra amostra; um nome ou ID de corrida que você já reconheceria resolve.",
+    "gcms.ref.step2.title": "2. O que você já calculou pra ela",
     "gcms.ref.step2.body":
-      "O que você já calculou à mão pra essa mesma corrida: compostos identificados, tempos de retenção, áreas, e os números finais de concentração, conversão, yield, seletividade e balanço de massa. Uma planilha serve — só precisa ser o número real que você assinaria embaixo, não uma estimativa grosseira.",
-    "gcms.ref.step3.title": "3. Pareados com clareza",
+      "O que já foi resolvido à mão pra essa mesma corrida: quais compostos, em que tempo de retenção e área, e a concentração, conversão, rendimento, seletividade e balanço de massa que saíram disso. Uma planilha resolve, contanto que seja o número que você assinaria embaixo, não uma estimativa rápida.",
+    "gcms.ref.step3.title": "3. Os dois juntos, pareados com clareza",
     "gcms.ref.step3.body":
-      "Envie o arquivo bruto e o seu resultado manual como um par, referenciando o mesmo nome de amostra, pra não ter ambiguidade de qual resultado pertence a qual corrida.",
+      "O arquivo bruto e o resultado manual, referenciando o mesmo nome de amostra, pra nunca sobrar dúvida de qual pertence a qual.",
     "gcms.ref.howmany":
-      "Se for possível, mais de uma amostra — idealmente várias, já validadas, cobrindo condições de reação diferentes (substratos, concentrações ou tempos diferentes). Uma amostra só mostra que a ferramenta funciona pra um caso; um punhado em condições diferentes é o que de fato permite confiar nela.",
+      "Mais de uma amostra, se der pra sobrar — várias, já validadas, cobrindo condições de reação diferentes: substrato, concentração, tempo. Uma amostra prova que a ferramenta funciona uma vez. Um punhado em condições diferentes é o que de fato garante confiança.",
 
-    "gcms.next.title": "O que acontece com o seu retorno",
+    "gcms.next.title": "O que acontece com o retorno",
     "gcms.next.body":
-      "Qualquer coisa aqui pode mudar: as fórmulas, o fluxo, o que conta como 'pronto'. Depois de validado isso, o desenvolvimento de verdade do módulo retoma de um ponto de partida combinado, em vez de suposições.",
+      "Toda fórmula, cada passo do fluxo, cada definição de \"pronto\" aqui ainda pode mudar. Depois de um sinal verde, ou de um conjunto de correções, o desenvolvimento de verdade retoma desse ponto combinado, em vez de partir de um palpite.",
 
     "fps.eyebrow": "Módulo",
     "fps.title": "FPS Calculator",
-    "fps.body": "Planejado como um módulo futuro da CatalIza. Ainda sem escopo definido — nada pra revisar aqui ainda.",
+    "fps.body": "Um módulo futuro da CatalIza, ainda sem escopo definido — não tem nada aqui pra revisar.",
     "fps.back": "Voltar ao Início",
 
     "contact.eyebrow": "Fale conosco",
